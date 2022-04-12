@@ -1,0 +1,51 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 4 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: pointnet_part_seg.py
+--------------------------------------------------------------------------------
+pointnet_part_seg.py:30:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+pointnet_part_seg.py:31:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+pointnet_part_seg.py:65:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+pointnet_part_seg.py:66:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'pointnet_part_seg.py'
+ outputting to 'pointnet_part_seg.py'
+--------------------------------------------------------------------------------
+
+29:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+30:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+30:18: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+30:69: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+30:69: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+31:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+31:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+31:62: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+31:62: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+63:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+65:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+65:18: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+65:69: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+65:69: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+66:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+66:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+66:62: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+66:62: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+94:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+141:17: INFO: Added keywords to args of function 'tf.reduce_mean'
+145:28: INFO: Added keywords to args of function 'tf.reduce_mean'
+146:15: INFO: Added keywords to args of function 'tf.reduce_mean'
+148:32: INFO: Added keywords to args of function 'tf.argmax'
+153:36: INFO: Added keywords to args of function 'tf.transpose'
+--------------------------------------------------------------------------------
+
